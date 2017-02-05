@@ -101,8 +101,11 @@ $(function () {
 
     var start = +new Date(),
         $tds = $('div[data-sparkline]'),
+        $avgs = $('.average'),
         fullLen = $tds.length,
         n = 0;
+
+
 
     // Creating 153 sparkline charts is quite fast in modern browsers, but IE8 and mobile
     // can take some seconds, so we split the input into chunks and apply them in timeouts
@@ -112,6 +115,7 @@ $(function () {
             i,
             len = $tds.length,
             $td,
+            $avg,
             stringdata,
             arr,
             data,
@@ -119,10 +123,37 @@ $(function () {
 
         for (i = 0; i < len; i += 1) {
             $td = $($tds[i]);
+            $avg = $($avgs[i]);
             stringdata = $td.data('sparkline');
             arr = stringdata.split('; ');
             data = $.map(arr[0].split(', '), parseFloat);
             chart = {};
+
+            console.log($avgs);
+            var sum = data.reduce(add, 0);
+
+            function add(a, b) {
+                return a + b;
+            }
+
+
+            var average = (sum / data.length);
+
+
+
+            $avg.html(average.toFixed(2));
+
+             if (average < 18 ) {
+                 $avg.addClass("label-danger");
+             }
+
+            if (average > 18 && average < 24) {
+                $avg.addClass("label-warning");
+            }
+
+            if (average > 24 && average < 31) {
+                $avg.addClass("label-success");
+            }
 
             if (arr[1]) {
                 chart.type = arr[1];
@@ -130,8 +161,22 @@ $(function () {
             $td.highcharts('SparkLine', {
                 series: [{
                     data: data,
-                    pointStart: 1
+                    pointStart: 1,
+                    zones: [{
+                        value: 18,
+                        color: '#d9534f'
+                    }, {
+                        value: 24,
+                        color: '#f0ad4e'
+                    }, {
+                        value: 30,
+                        color: '#5cb85c'
+                    }]
+
                 }],
+                yAxis: {
+                    max: 31
+                },
                 tooltip: {
                     headerFormat: '<span style="font-size: 10px"> Esercitazione {point.x}:</span><br/>',
                     pointFormat: '<b>{point.y}</b> / 30'
