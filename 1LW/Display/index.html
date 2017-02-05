@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Display</title>
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Space Mono -->
+<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="src/css/style.css">
+
+
+</head>
+
+<body>
+
+
+<h1>Display</h1>
+
+
+<h4>Display: Inline</h4>
+
+<p>E' il display di default del testo. L'elemento ha le seguenti caratteristiche:</p>
+
+<ul>
+	<li>L'elemento segue il flusso della pagina seguedo la largezza del contenitore padre</li>
+	<li>Non accetta modifiche in larghezza e altezza (height, width)</li>
+	<li>La sua gravità è dettata dall'allineamento del testo (text-align) del contenitore</li>
+</ul>
+
+<p>Esempio: <code> &ltspan&gt; </code> </p>
+
+<div class="box-container inline">
+<span>Lorem</span> <span>ipsum</span> <span>dolor</span> <span>sit</span> <span>amet</span> <span>amet</span> <span>consectetur</span> <span>adipisicing</span> <span>elit</span> <span>,</span> <span>sed</span> <span>do</span> <span>eiusmod</span> <span>tempor</span> <span>incididunt</span> 
+</div>
+
+
+<h4>Display: Block</h4>
+
+<p>E' il display di default dei div. L'elemento ha le seguenti caratteristiche:</p>
+
+<ul>
+	<li>E' largo il 100% del contenitore padre</li>
+	<li>Presenta un elemento di break virtuale prima e dopo di se</li>
+	<li>Può essere modificato in altezza e larghezza</li>
+	<li>Segue il flusso della pagina e la "gravità" verso l'alto</li>
+</ul>
+
+<p>Esempio: <code> &ltdiv&gt; </code> </p>
+
+<div class="box-container block">
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+</div>
+
+
+<h4>Display: Inline-block</h4>
+
+<p>E' un ibrido tra il display:inline e il display:block. L'elemento ha le seguenti caratteristiche:</p>
+
+<ul>
+	<li>L'elemento segue il flusso della pagina seguedo la largezza del contenitore padre</li>
+	<li>Può essere modificato in altezza e larghezza</li>
+	<li>La sua gravità è dettata dall'allineamento del testo (text-align) del contenitore</li>
+	<li>Ha un margine automatico nato per simulare lo spazio del testo</li>
+</ul>
+
+<p>Esempio: <code> &ltbutton&gt; </code> </p>
+
+<div class="box-container inline-block">
+	<div class="box-inline">Box Inline</div>
+	<div class="box-inline" style="width:200px">Box Inline</div>
+	<div class="box-inline" style="height:200px">Box Inline</div>
+<!-- 	<button>Click Me</button> -->
+</div>
+
+<p>Note: Come rimuovere il margine automatico tra i box:</p>
+
+<ul>
+	<li>Settare il font size del parent a 0 (e rimetterlo normale ai figli)</li>
+	<li>Aggiungere un margine negativo ai box (Da evitare perchè può variare)</li>
+</ul>
+
+
+
+
+
+
+
+</body>
+
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+</html>

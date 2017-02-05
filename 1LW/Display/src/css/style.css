@@ -1,0 +1,75 @@
+body{
+	background-color: #ddd;
+	font-family: 'Space Mono', monospace;
+	padding: 20px;
+}
+
+h4{
+	margin-top: 40px;
+}
+
+.website{
+	background-color: white;
+}
+
+.box-container{
+	border: 1px dashed #666;
+	margin: 3px;
+	position: relative;
+	padding: 10px;
+}
+
+.box{
+	width: 150px;
+	height: 150px;
+	background-color: DodgerBlue;
+	border: 1px solid white;
+	margin: 5px;
+}
+
+.inline{
+/*	text-align: right;*/
+}
+
+.inline span{
+	font-size: 20px;
+	background-color: rgba(255,0,0,0.3);
+	border: 1px solid white;
+
+}
+
+.box-container.block{
+	border: 1px dashed #666;
+	position: relative;
+	padding: 1px;
+	margin: 0;
+}
+
+.block .box{
+	width: auto;
+	height: 50px;
+	background-color: rgba(255,0,0,0.3);
+	border: 1px solid white;
+	margin: 2px;
+}
+
+.inline-block{
+/*	text-align: right;*/
+/*font-size: 0;*/
+}
+
+.inline-block .box-inline{
+	width: 100px;
+	height: 50px;
+	display: inline-block;
+	background-color: rgba(255,0,0,0.3);
+	border: 1px solid white;
+/*	font-size: 14px;*/
+/*margin-left: -9px;*/
+
+}
+
+.inline-block button{
+	width: 200px;
+	height: 50px;
+}

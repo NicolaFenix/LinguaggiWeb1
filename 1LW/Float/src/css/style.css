@@ -1,0 +1,44 @@
+body{
+	background-color: #ddd;
+	font-family: 'Space Mono', monospace;
+	padding: 20px;
+}
+
+.website{
+	background-color: white;
+}
+
+.box-container{
+	border: 1px dashed #666;
+	margin: 3px;
+}
+
+
+.box{
+	width: 150px;
+	height: 150px;
+	background-color: DodgerBlue;
+	border: 1px solid white;
+	margin: 5px;
+}
+
+.normal{
+
+}
+
+
+
+
+.float-left{
+	float:left;
+	background-color: Fuchsia;
+}
+
+.float-right{
+	float:right;
+	background-color: Fuchsia;
+}
+
+.stop-float{
+	clear: both;
+}

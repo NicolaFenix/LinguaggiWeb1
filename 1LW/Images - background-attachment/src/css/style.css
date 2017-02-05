@@ -1,0 +1,120 @@
+body{
+	background-color: #ddd;
+	font-family: 'Space Mono', monospace;
+	padding: 20px;
+}
+
+h4{
+	margin-top: 40px;
+}
+
+.website{
+	background-color: white;
+}
+
+.box-container{
+	border: 1px dashed #666;
+	margin: 3px;
+	position: relative;
+	background-image:url(../img/swiss-alps.jpg);
+	height: 400px;
+	background-size: cover;
+	background-position: 50% 50%;
+
+}
+
+.box-text{
+	color: white;
+	position: relative; 
+	width: 50%;
+	top:50%; 
+	margin-left: 30px;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.box-container.scroll{
+	background-attachment: scroll;
+}
+	
+.box-container.fixed{
+	background-attachment: fixed;
+}
+	
+
+.box-container.local{
+	overflow: auto;
+	background-attachment: local;
+}
+
+.box-container.local .box-text{
+	color: white;
+	position: relative; 
+	width: calc(100% - 60px);
+	top:0; 
+	margin: 0 30px;
+
+	-webkit-transform: translateY(0);
+	-moz-transform: translateY(0);
+	-o-transform: translateY(0);
+	-ms-transform: translateY(0);
+	transform: translateY(0);
+}	
+
+
+
+
+.scrollbox {
+	border: none;
+	overflow: auto;
+
+	height: 200px;
+
+	/* L'ordine è settato al contrario dell'HTML, ovvero in alto c'è il + alto */
+
+	background:
+		url(../img/linear-top.png),
+		url(../img/linear-bottom.png),
+		url(../img/radial-top.png),
+		url(../img/radial-bottom.png);
+	
+	background-position: 0 0, 0 100%, 0 0, 0 100%;
+	background-repeat: no-repeat;
+	background-color: #ddd;
+	background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+	
+	/* I lineari scrollano insieme al contenuto, i radiali sono fissi rispetto al contenitore (come è normale che sia)*/
+
+	background-attachment: local, local, scroll, scroll;
+}
+
+/*
+	background:
+		url(../img/linear-top.png),
+		url(../img/linear-bottom.png),
+		url(../img/radial-top.png),
+		url(../img/radial-bottom.png);
+*/
+
+/* Demo
+	background:
+		url(../img/linear-demo-top.png),
+		url(../img/linear-demo-bottom.png),
+		url(../img/radial-demo-top.png),
+		url(../img/radial-demo-bottom.png);
+*/
+
+
+/* Pure CSS
+	background:
+
+		linear-gradient(#ddd 30%, rgba(255,255,255,0)), 
+		linear-gradient(rgba(255,255,255,0), #ddd 70%) 0 100%,
+		radial-gradient(farthest-side at 50% 0, rgba(0,0,0,.2), rgba(0,0,0,0)),
+		radial-gradient(farthest-side at 50% 100%, rgba(0,0,0,.2), rgba(0,0,0,0)) 0 100%;
+*/
+
+

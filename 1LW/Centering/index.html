@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Centering</title>
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Space Mono -->
+<link href="https://fonts.googleapis.com/css?family=Space+Mono:400,700" rel="stylesheet">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="src/css/style.css">
+
+
+</head>
+
+<body>
+
+
+<h1>Centering</h1>
+
+
+<h4>Text (inline) horizontal centering</h4>
+<p>CSS: <code>text-align:center;</code></p>
+<div class="box-container text-center">
+	<h1>Title</h1>
+	<h4>Subtitle</h4>
+	<p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. </p>
+</div>
+
+<h4>Image (inline-block) horizontal centering</h4>
+<p>CSS: <code>text-align:center;</code></p>
+<div class="box-container text-center">
+	<img src="src/img/img-1.jpeg" alt="cover" width="228" height="342">
+</div>
+
+
+
+<h4>Div (block) horizontal centering - I</h4>
+<p>CSS: <code>margin: 0 auto;</code></p>
+
+<div class="box-container block-center-1">
+	<div class="box"></div>
+</div>
+
+<h4>Div (block) horizontal centering - II</h4>
+<p>CSS: <code>position: relative; left: 50%; margin: -(width/2);</code></p>
+
+<div class="box-container block-center-2">
+	<div class="box"></div>
+</div>
+
+<h4>Div (block) horizontal centering - III</h4>
+<p>CSS: <code>position: relative; left: 50%; transform: translateX(-50%);</code></p>
+
+<div class="box-container block-center-3">
+	<div class="box"></div>
+</div>
+
+
+<h4>Text - single line vertical centering - I</h4>
+<p>CSS: <code>padding-top: 30px; padding-bottom:30px;</code></p>
+<div class="box-container">
+	<span class="single-line-1">Bottone</span>
+</div>
+
+<h4>Text - single line vertical centering - II</h4>
+<p>Quando è nota l'altezza del contenitore (hack)</p>
+<p>CSS: <code>line-height:100px;</code></p>
+<div class="box-container single-line-2">
+	<span>Bottone</span>
+</div>
+
+
+<h4>Div vertical centering - I</h4>
+<p>Quando è nota l'altezza del div da centrare</p>
+<p>CSS: <code>position:relative; top:50%; margin: -(height/2);</code></p>
+<div class="box-container div-vertical-1">
+	<div class="box"></div>
+</div>
+
+
+<h4>Div vertical centering - II</h4>
+<p>Quando non è nota l'altezza del div da centrare, ad esempio con il testo</p>
+<p>CSS: <code>position:relative; top:50%; transform: translateY(-50%);</code></p>
+<div class="box-container div-vertical-2">
+	<div class="box-text">
+		<p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. </p>
+	</div>
+</div>
+
+
+<h4>Div horizontal and vertical centering</h4>
+<p>Situazione peggiore: non è nota ne l'altezza ne la larghezza e bisogna centrare l'elemento sia in orizzontale che verticale</p>
+<p>CSS: <code>position:relative; top:50%; left:50%: transform: translate(-50%. 50%);</code></p>
+<div class="box-container div-both">
+	<div class="box-text">
+		<p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. </p>
+	</div>
+</div>
+
+
+
+</body>
+
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+</html>

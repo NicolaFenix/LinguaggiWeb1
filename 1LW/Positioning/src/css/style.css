@@ -1,0 +1,70 @@
+body{
+	background-color: #ddd;
+	font-family: 'Space Mono', monospace;
+	padding: 20px;
+}
+
+h4{
+	margin-top: 40px;
+}
+
+.website{
+	background-color: white;
+}
+
+.box-container{
+	border: 1px dashed #666;
+	margin: 3px;
+	position: relative;
+}
+
+
+.box{
+	width: 150px;
+	height: 150px;
+	background-color: DodgerBlue;
+	border: 1px solid white;
+	margin: 5px;
+}
+
+.relative-ghost{
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0.5;
+}
+
+
+.relative{
+	position: relative;
+	top: 20px;
+	left: 20px;
+}
+
+.box-bisnonno, .box-nonno, .box-padre{
+	border: 1px dashed #666;
+	padding: 10px;
+	min-height: 160px;
+}
+
+
+
+
+.absolute{
+	position: absolute;
+	opacity: 0.6;
+	top: -7px;
+	left: -7px;
+}
+
+
+.fixed{
+	position: fixed;
+	opacity: 0.6;
+	top: 0;
+	left: 0;
+	color: white;
+	padding: 15px;
+}
+
+

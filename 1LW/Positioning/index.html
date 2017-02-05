@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Positioning</title>
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Space Mono -->
+<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="src/css/style.css">
+
+
+</head>
+
+<body>
+
+
+<h1>Positioning</h1>
+
+
+<h4>Position: Static</h4>
+
+<p>Flusso: Si</p>
+<p>L'elemento rimane dove è</p>
+
+<div class="box-container">
+	<div class="box"></div>
+</div>
+
+<h4>Position: Relative</h4>
+
+<p>Flusso: Si</p>
+<p>L'elemento mantiene "virtualmente" la sua posizione originale, e si sposta a seconda dei valori CSS che gli vengono assegnati</p>
+
+<div class="box-container">
+	<div class="box relative-ghost"></div>
+	<div class="box relative"></div>
+</div>
+
+<h4>Position: Absolute</h4>
+
+<p>Flusso: No</p>
+<p>L'elemento viene rimosso dal flusso della pagina, e si posiziona in base al primo elemento "padre" che lo contiene</p>
+
+<div class="box-bisnonno">
+	Bisnonno
+		<div class="box-nonno">
+			Nonno
+			<div class="box-padre" style="position:relative">
+				Padre
+				<div class="box absolute"></div>
+			</div>
+		</div>
+</div>
+
+
+<h4>Position: Fixed</h4>
+
+<p>Flusso: No</p>
+<p>L'elemento viene rimosso dal flusso della pagina, e si posiziona in base alla viewport (e solo essa) - L'elemento è commentato</p>
+
+<div class="box-bisnonno">
+	Bisnonno
+		<div class="box-nonno">
+			Nonno
+			<div class="box-padre" style="position:relative">
+				Padre
+				<!-- <div class="box fixed">Box Fixed</div> -->
+			</div>
+		</div>
+</div>
+
+
+
+</body>
+
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+</html>

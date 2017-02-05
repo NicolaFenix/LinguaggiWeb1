@@ -1,0 +1,60 @@
+body{
+	background-color: #ddd;
+	font-family: 'Space Mono', monospace;
+	padding: 20px;
+}
+
+h4{
+	margin-top: 40px;
+}
+
+.website{
+	background-color: white;
+}
+
+.box-container{
+	border: 1px dashed #666;
+	margin: 3px;
+	position: relative;
+}
+
+
+.box{
+	width: 150px;
+	height: 150px;
+	background-color: DodgerBlue;
+	border: 1px solid white;
+	margin: 5px;
+	transition: width 2s ease-in-out;
+}
+
+.box.transition-1{
+	transition: width 2s ease-in-out;
+}
+
+
+.transition-1:hover{
+	width: 300px;
+}
+
+@keyframes animazione{
+	0 {top:0; left: 0}
+	25% {top:200px; left: 0;}
+	50% {top:200px; left: 200px;}
+	75% {top:0; left: 200px;}
+	100% {top:0; left: 0}
+}
+
+
+.box.transition-2{
+	position: relative;
+	top: 0;
+	left: 0;
+	animation: animazione 5s infinite;
+}
+
+
+
+
+
+

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Box-model</title>
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Space Mono -->
+<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="src/css/style.css">
+
+
+</head>
+
+<body>
+
+
+<h1>Box-Model</h1>
+
+
+<h4>Standard Box Model</h4>
+<p>Il box e' largo 300px e alto 175px, ma il padding e il bordo aggiungono rispettivamente 20px su ogni lato, portando la grandezza del box a 380px x 265px.</p>
+
+
+
+
+
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			<div class="no-bootstrap">
+				<div class="margin"></div>
+				<div class="box-container">
+					<div class="padding"></div>
+					<p>Box 300px x 185px</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="legenda">
+				<ul class="list-unstyled">
+					<li><span class="ico cont"></span> Content </li>
+					<li><span class="ico padd"></span> Padding </li>
+					<li><span class="ico bord"></span> Border </li>
+					<li><span class="ico marg"></span> Margin </li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<h4>Border-box Box Model (Bootstrap like)</h4>
+<p>La proprietà box-sizing determina se il bordo e il padding dell'elemento sono inclusi nelle dimensioni totali.</p>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			<div class="bootstrap">
+				<div class="margin"></div>
+				<div class="box-container">
+					<div class="padding"></div>
+					<p>Box 300px x 185px</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="legenda">
+				<ul class="list-unstyled">
+					<li><span class="ico cont"></span> Content </li>
+					<li><span class="ico padd"></span> Padding </li>
+					<li><span class="ico bord"></span> Border </li>
+					<li><span class="ico marg"></span> Margin </li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+</body>
+
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+</html>

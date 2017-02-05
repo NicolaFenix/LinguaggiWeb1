@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Images</title>
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Space Mono -->
+<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="src/css/style.css">
+
+
+</head>
+
+<body>
+
+
+<h1>Images</h1>
+
+
+<h4>Content Images</h4>
+
+<p>Fanno parte del contenuto della pagina (le immagini dei prodotti di Amazon)</p>
+
+<p>Tag di riferimento: <code>&ltimg src=&quot;src/img/img-1.jpeg&quot; alt=&quot;cover&quot;&gt; </code></p>
+
+<p>Tipologie classiche di file: JPG, PNG (trasparenti), SVG (vettoriali)</p>
+
+<div class="box-container content-img">
+	<img src="src/img/img-1.jpeg" alt="cover" width="228" height="342">
+	<img src="src/img/png.png" alt="cover" width="228" height="342">
+	<img src="src/img/svg.svg" alt="cover" width="228" height="342">
+</div>
+
+<p>Note: Di default si settano alle dimensioni originali (500x750). In questo caso l'immagine è stata ridotta a 228x342 tramite gli attributi del tag img</p>
+<p>Note: Anche l'elemento img è un tag con display di tipo inline-block</p>
+<p>Note: Si può aggiungere la classe img-responsive di Bootstrap per farla adattare al contenitore padre</p>
+
+
+
+<h4>Layout Images</h4>
+
+<p>Non sono strettamente necessari al contenuto della pagina. Sono in genenere le immagini di background</p>
+
+<div class="box-container clearfix">
+	<div class="background-img pattern">Pattern</div>
+	<div class="background-img cover">Cover</div>
+	<div class="background-img contain">Contain</div>
+</div>
+
+
+<h4>Layout in action</h4>
+
+
+<div class="box-container container">
+	<div class="row">
+		<div class="col-md-4"><div class="background-img pattern">Pattern</div></div>
+		<div class="col-md-4"><div class="background-img cover">Cover</div></div>
+		<div class="col-md-4"><div class="background-img contain">Contain</div></div>
+	</div>
+</div>
+
+<h4>User Interface (UI) images</h4>
+
+<p>Servono a capire come muoversi e cosa premete nella pagina</p>
+
+<div class="box-container clearfix">
+	<div class="ui-img single"></div>
+	<div class="ui-img sprite"></div>
+	
+</div>
+
+
+<h4>Sprites</h4>
+<p>Meno chiamate durante il caricamento della pagina, tutto nella stessa immagine.</p>
+
+<div class="box-container ui clearfix">
+	<div class="ui-img-sprite-demo">
+		<img src="src/img/sprite.svg" width="750" height="150">
+	</div>
+
+</div>
+
+
+
+
+
+
+</body>
+
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+</html>

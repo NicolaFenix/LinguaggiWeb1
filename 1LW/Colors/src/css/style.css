@@ -1,0 +1,71 @@
+body{
+	background-color: #ddd;
+	font-family: 'Space Mono', monospace;
+	padding: 20px;
+}
+
+h4{
+	margin-top: 40px;
+}
+
+.website{
+	background-color: white;
+}
+
+.box-container{
+	border: 1px dashed #666;
+	margin: 3px;
+	position: relative;
+
+}
+
+
+
+.box{
+	width: 150px;
+	height: 150px;
+	background-color: DodgerBlue;
+	border: 1px solid white;
+	margin: 5px;
+}
+
+.red{
+	background-color: #FF0000;
+}
+
+.green{
+	background-color: #00FF00;
+}
+
+.blue{
+	background-color: #0000FF;
+}
+
+.red-rgb{
+	background-color: #FF0000;
+}
+
+.green-rgb{
+	background-color: #00FF00;
+}
+
+.blue-rgb{
+	background-color: #0000FF;
+}
+
+.color-rgba{
+	/* Per far vedere questa proprietà ho dovuto usare il linear gradient tra 2 valori uguali perche rgba + image sembra non funzionare */
+	background: linear-gradient(rgba(178,87,138,0.5), rgba(178,87,138,0.5)),
+				url(../img/img-3.jpeg);
+}
+
+.gradient-linear{
+	background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0)),
+				url(../img/img-3.jpeg);
+}
+
+.radial-linear{
+	background:  radial-gradient(rgba(0,0,0,1) ,rgba(0,0,0,0) ),
+				url(../img/img-3.jpeg);
+}
+

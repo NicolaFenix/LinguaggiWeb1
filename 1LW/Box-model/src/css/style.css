@@ -1,0 +1,150 @@
+body{
+	background-color: #ddd;
+	font-family: 'Space Mono', monospace;
+	padding: 20px;
+}
+
+h4{
+	margin-top: 40px;
+}
+
+.website{
+	background-color: white;
+}
+
+.box-container{
+	position: relative;
+	margin: 40px;
+	border: 20px solid transparent;
+	padding: 20px;
+	background-color: DodgerBlue;
+	width: 300px;
+	height: 185px;
+}
+
+.box-container p{
+	color: white;
+}
+
+
+.padding{
+	opacity: 0;
+	border: 20px solid MediumAquaMarine;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.no-bootstrap .padding{
+	width: calc(100% - 40px); /* Con absolute riesco ad "annullare" l'effetto del padding, quindi sottraggo solo il border */
+	height: calc(100% - 40px);
+}
+
+
+.margin{
+	opacity: 0;
+	position: absolute;
+	width: 380px; /* Sarebbe 300px + 20px di padding + 20px di border (x2)*/
+	height: 265px;
+	top: -40px;
+	left: 0;
+	background: repeating-linear-gradient(
+	  -55deg,
+	  #eee,
+	  #eee 10px,
+	  #ddd 10px,
+	  #ddd 20px
+	);
+}
+
+.plain *{
+	border-color:transparent; 
+}
+
+.no-bootstrap .margin{
+	position: absolute;
+	width: 460px; /* Sarebbe 300px + 20px di padding + 20px di border (x2)*/
+	height: 345px;
+	top: -40px;
+	left: 0;
+}
+
+
+.no-bootstrap, .bootstrap{
+	margin: 80px 0;
+	position: relative;
+}
+
+.no-bootstrap *{
+  -webkit-box-sizing: content-box; /* L'altezza e la larghezza si riferiscono solo al contenuto */
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.bootstrap *{
+  -webkit-box-sizing: border-box; /* Include sia il bordo che il padding, ma non il margine */
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+
+/* Legenda */
+
+.legenda{
+	opacity: 0;
+	margin-top: 50px;
+}
+
+.legenda li{
+	margin: 5px 0;
+}
+
+.ico{
+	width: 20px;
+	height: 20px;
+	border: 1px solid white;
+	display: inline-block;
+	background-color: #ccc;
+
+	position: relative; /* Classico uso del position relative*/
+	top: 5px
+}
+
+.cont{ background-color: DodgerBlue;}
+.padd{ background-color: MediumAquaMarine;}
+.bord{ background-color: Moccasin;}
+.marg{ background: repeating-linear-gradient(
+	  -55deg,
+	  #eee,
+	  #eee 10px,
+	  #ddd 10px,
+	  #ddd 20px
+	);}
+
+
+
+
+/* Animation */
+
+.container *{
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;	
+}
+
+
+.container:hover .box-container{
+	border-color: Moccasin;  
+}
+
+.container:hover .legenda, .container:hover .padding, .container:hover .margin{
+	opacity: 1;
+} 
+
+
+	

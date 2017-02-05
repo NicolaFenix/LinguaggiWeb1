@@ -1,0 +1,124 @@
+body{
+	background-color: #ddd;
+	font-family: 'Space Mono', monospace;
+	padding: 20px;
+}
+
+h4{
+	margin-top: 40px;
+}
+
+.website{
+	background-color: white;
+}
+
+.box-container{
+	border: 1px dashed #666;
+	margin: 3px;
+	position: relative;
+
+}
+
+.content-img{
+	background-color: rgba(255,0,0,0.1)
+}
+
+.box{
+	width: 150px;
+	height: 150px;
+	background-color: DodgerBlue;
+	border: 1px solid white;
+	margin: 5px;
+}
+
+
+.background-img{
+	width: 230px;
+	height: 230px;
+	float: left;
+	margin: 15px;
+	color: white;
+	padding: 15px;
+	background-color: rgba(255,0,0,0.3); /* Colore di Fallback */
+}
+
+.pattern{
+	background-image: url(../img/pattern.png);  /* Attenzione alla path */
+/*	background-size: 50px 50px;
+	background-repeat: no-repeat;*/
+}
+
+.cover{
+	background-image: url(../img/img-1.jpeg);
+	background-size: cover;
+}
+
+.contain{
+	background-image: url(../img/img-1.jpeg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+
+.col-md-4 .background-img{
+	width: auto;
+	height: 230px;
+	float: none;
+	color: white;
+	background-position: 50% 50%;
+	background-color: rgba(255,0,0,0.3); /* Colore di Fallback */
+}
+
+
+.ui{
+	overflow: hidden;
+	height: 300px
+}
+
+.ui-img{
+	margin: 15px;
+	float: left;
+}
+
+.ui-img.single{
+	background-image: url(../img/arrow.svg);
+	width: 50px;
+	height: 83px;
+	background-size: contain;
+	cursor: pointer;
+}
+
+.ui-img.sprite{
+	background-image: url(../img/sprite.svg);
+	width: 15px;
+	height: 15px;
+	background-position: 0 0;
+	/*background-color: rgba(255,0,0,0.2);*/
+/*	background-position: -15px -15px;*/
+	cursor: pointer;
+}
+
+.ui-img-sprite-demo{
+	height: 75px;
+	width: 75px;
+	top: 50px;
+	left: 50px;
+	position: relative;
+	border: 1px solid red;
+	float: left;
+	background-image: url(../img/sprite.svg);
+	background-position: 0 0; /* A) Spostare questo */
+	/*background-position: -75px 0;*/
+	background-size: 750px 150px;
+}
+
+.ui-img-sprite-demo img{
+	top: 0;/* B) Spostare questo */
+	left: 0;/* B) Spostare questo */
+	/*left: -75px;*/
+	position: absolute;	
+	opacity: 0.3;
+}
+
+

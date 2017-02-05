@@ -1,0 +1,121 @@
+body{
+	background-color: #ddd;
+	font-family: 'Space Mono', monospace;
+	padding: 20px;
+}
+
+h4{
+	margin-top: 40px;
+}
+
+.website{
+	background-color: white;
+}
+
+.box-container{
+	border: 1px dashed #666;
+	margin: 3px;
+}
+
+
+.box{
+	width: 200px;
+	height: 150px;
+	background-color: DodgerBlue;
+	border: 1px solid white;
+	margin: 5px;
+}
+
+.box-text{
+	width: 50%;
+	border: 1px dashed #666;;
+	margin: 5px;
+}
+
+.text-center h4{
+	margin-top: 0;
+}
+
+.block-center-1 .box{
+	margin: 5px auto;
+}
+
+.block-center-2 .box{
+	position: relative; /* Oppure absolute */
+	left: 50%;
+	margin-left: -100px;
+}
+
+.block-center-3 .box{
+	position: relative; /* Oppure absolute */
+	left: 50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+}
+
+.single-line-1{
+	display: inline-block;
+	padding-top: 30px; 
+	padding-bottom:30px;
+	padding-left: 30px;
+}
+
+
+.single-line-2{
+	height: 100px;
+}
+
+.single-line-2 span{
+	line-height: 100px;
+	padding-left: 30px;
+}
+
+.div-vertical-1{
+	height: 350px;
+}
+
+.div-vertical-1 .box{
+	position: relative; /* Oppure absolute */
+	top:50%; 
+	margin-top: -75px;
+	margin-left: 30px;
+}
+
+.div-vertical-2{
+	height: 350px;
+}
+
+
+.div-vertical-2 .box-text{
+	position: relative; /* Oppure absolute */
+	top:50%; 
+	margin-left: 30px;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+}
+
+.div-both{
+	height: 350px;
+}
+
+
+.div-both .box-text{
+	position: relative; /* Oppure absolute */
+	top:50%; 
+	left: 50%;
+	transform: translate(-50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+}
+
+
+
+

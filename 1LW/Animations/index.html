@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Animations</title>
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Space Mono -->
+<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="src/css/style.css">
+
+
+</head>
+
+<body>
+
+
+<h1>Animations </h1>
+
+
+<h4>Transitions <span class="label label-warning">CSS3</span></h4>
+
+
+<p>La proprietà transition attiva un effetto di transizione ad un elemento. Vanno specificate 2 cose:</p>
+<ul>
+	<li>La proprietà CSS che si vuole animare</li>
+	<li>La durata dell'effetto</li>
+</ul>
+<p>
+CSS: <code>transition: &lt;proprietà&gt; &lt;durata&gt; &lt;timing-function&gt; &lt;delay&gt;;</code>
+</p>
+<p>
+CSS: <code>transition: width 2s ease-in-out;</code>
+</p>
+
+<div class="box-container">
+	<div class="box transition-1"></div>
+</div>
+
+<p>Note: Si possono animare anche più proprietà insieme, con <code>transition: width 2s, height 4s;</code> (e con parametri diversi).</p>
+
+<h4>Keyframe animation <span class="label label-warning">CSS3</span></h4>
+
+
+<p>Si compone di 2 passaggi:</p>
+<ol>
+	<li>Definizione dell'animazione</li>
+	<li>Assegnazione dell'animazione</li>
+</ol>
+
+<p>CSS: <code>@keyframes &lt;nome-animazione&gt;{ <br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;from&gt; {&lt;propriet&agrave;&gt;: &lt;valore&gt;;}<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;to&gt; {&lt;propriet&agrave;&gt;: &lt;valore&gt;;} <br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</code> </p>
+
+
+
+
+
+<div class="box-container">
+	<div class="box transition-2"></div>
+</div>
+
+</body>
+
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+</html>
