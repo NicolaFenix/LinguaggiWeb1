@@ -13,8 +13,9 @@
 	-moz-border-radius: 50%;
 	border-radius: 50%;
 	display: inline-block;
-	background-size: contain;
+	background-size: cover;
 	background-color: #efefef;
+	background-position: 50% 50%;
 }
 
 
