@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Transform</title>
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Space Mono -->
+<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="src/css/style.css">
+
+
+</head>
+
+<body>
+
+
+<h1>Transform</h1>
+
+
+<h4>Transform 2d <span class="label label-warning">CSS3</span></h4>
+
+
+<p>La proprietà transform applica una trasformazione 2D ad un elemento. Permette di scalare, ruotare, spostare gli elementi in 2 dimensioni.</p>
+
+<p>
+CSS: <code>transform: &lt;funzione&gt;;</code>
+</p>
+
+<p>
+CSS: <code>transform: translate(20px,30px) scaleY(0.5);</code>
+</p>
+
+
+
+<div class="box-container">
+	<div class="box transform-1"></div>
+</div>
+
+
+<h4>Transform 3d <span class="label label-warning">CSS3</span></h4>
+
+
+<p>La proprietà transform applica una trasformazione 3D ad un elemento. Permette di scalare, ruotare, spostare gli elementi in 3 dimensioni.</p>
+
+<p>
+CSS: <code>transform: &lt;funzione&gt;;</code>
+</p>
+
+<p>
+CSS: <code>transform: rotateZ(35deg) rotateY(45deg);</code>
+</p>
+
+
+
+<div class="box-container">
+	<div class="box transform-2"></div>
+</div>
+
+
+<h4>Transform origin <span class="label label-warning">CSS3</span></h4>
+
+
+<p>La proprietà transform-origin modifica il punto di inserimento dell'elemento, e quindi il punto di applicazione delle trasformazioni.</p>
+
+<p>
+CSS: <code>transform-origin: &lt;valoreX valoreY&gt;;</code>
+</p>
+
+
+
+<div class="box-container container-fluid">
+
+	<div class="row">
+		<div class="col-md-4">
+			<h5 class="transform-origin-title">Skew</h5>
+			<div class="box transform-origin t1 on"> 0 0</div>
+			<div class="box transform-origin t1"> 50% 50% </div>
+			<p>Importante per il punto di ancoraggio che, nel caso di trasform origin di default (50% 50%), è come se fosse in un punto indeterminato nello spazio.
+			Nel caso di 0 0, invece, coincide con il punto di applicazione della trasformazione e quindi è ben identificabile.</p>
+		</div>
+		<div class="col-md-4">
+			<h5 class="transform-origin-title">Rotate</h5>
+			<div class="box transform-origin t2 on"> 0 0</div>
+			<div class="box transform-origin t2"> 50% 50% </div>
+			<p>Anche in questo caso il punto di inserimento fa la differenza. Se serve muovere l'oggetto come se fosse la lancetta di un orologio conviene l'origin modificata (0 0). Per il movimento di una ruota invece quello di default (50% 50%) è perfetto.</p>
+		</div>
+		<div class="col-md-4">
+			<h5 class="transform-origin-title">Scale</h5>
+			<div class="box transform-origin t3 on"> 0 0</div>
+			<div class="box transform-origin t3"> 50% 50% </div>
+			<p>Nel caso della scala, la transform-origin modificata permette di realizzare una barra di caricamento che si espande dalla sinistra verso la destra. In altri casi invece potrebbe essere più conveniente che l'elemento si espanda in maniera proporzionale.</p>
+		</div>
+	</div>	
+
+
+
+</div>
+
+
+
+<h4>Transform + Animation </h4>
+
+
+<p>Si può combinare una trasformazione SSR e un'animazione per ottenere un effetto interessante.</p>
+
+<p>
+CSS: <code>transform:matrix(0.87,0.50,-0.69,0.59,0,0);</code>
+</p>
+
+
+
+<div class="box-container ssr-container">
+	<div class="box transform-3"></div>
+	<div class="box transform-3 shadow"></div>
+	<div class="box transform-3 a"></div>
+	<div class="box transform-3 b"></div>
+	<div class="box transform-3 c"></div>
+</div>
+
+<br>
+<a href="https://design.tutsplus.com/tutorials/how-to-create-advanced-isometric-illustrations-using-the-ssr-method--vector-1058" target="_blank">SSR Method</a> |
+
+<a href="http://angrytools.com/css-generator/" target="_blank">Matrix 2D Generator</a>
+
+<br><br><br><br><br><br>
+
+
+
+</body>
+
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+</html>
