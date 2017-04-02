@@ -13,16 +13,16 @@ All the lessons are in the folder:
 
 ## Lessons
 
-* [Animation](http://www.quasar-1617.com/1LW/Animations/index.htm){:target="_blank"}
-* [Box-Model](http://www.quasar-1617.com/1LW/Box-model/index.htm){:target="_blank"}
-* [Centering](http://www.quasar-1617.com/1LW/Centering/index.htm){:target="_blank"}
-* [Colors](http://www.quasar-1617.com/1LW/Colors/index.htm){:target="_blank"}
-* [Display](http://www.quasar-1617.com/1LW/Display/index.htm){:target="_blank"}
-* [Float](http://www.quasar-1617.com/1LW/Float/index.htm){:target="_blank"}
-* [Images](http://www.quasar-1617.com/1LW/Images/index.htm){:target="_blank"}
-* [Images - Background attachment](http://www.quasar-1617.com/1LW/Images-background-attachment/index.htm){:target="_blank"}
-* [Javascript](http://www.quasar-1617.com/1LW/Javascript/index.htm){:target="_blank"}
-* [Positioning](http://www.quasar-1617.com/1LW/Positioning/index.htm){:target="_blank"}
-* [Transform](http://www.quasar-1617.com/1LW/Transform/index.htm){:target="_blank"}
+* [Animation](http://www.quasar-1617.com/1LW/Animations/index.html)
+* [Box-Model](http://www.quasar-1617.com/1LW/Box-model/index.html)
+* [Centering](http://www.quasar-1617.com/1LW/Centering/index.html)
+* [Colors](http://www.quasar-1617.com/1LW/Colors/index.html)
+* [Display](http://www.quasar-1617.com/1LW/Display/index.html)
+* [Float](http://www.quasar-1617.com/1LW/Float/index.html)
+* [Images](http://www.quasar-1617.com/1LW/Images/index.html)
+* [Images - Background attachment](http://www.quasar-1617.com/1LW/Images-background-attachment/index.html)
+* [Javascript](http://www.quasar-1617.com/1LW/Javascript/index.html)
+* [Positioning](http://www.quasar-1617.com/1LW/Positioning/index.html)
+* [Transform](http://www.quasar-1617.com/1LW/Transform/index.html)
 
 
