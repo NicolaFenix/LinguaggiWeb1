@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Javascript</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -579,7 +579,7 @@
 </script>
 
 
-<h3>Trucchi rapidi</h3>
+<h3>Tips & Tricks</h3>
 <p class="semi-title">Funzione su bottone</p>
 <p>Si può inserire una funzione su un bottone inserendo un attributo <code>onclick="funzione()"</code> direttamente
     nell'html, a qualunque elemento (vedi pulsanti questa pagina).</p>
@@ -1100,6 +1100,7 @@
 
         $("#appendContainer").append("<div class='box transition array appendIn'></div>");
 
+
         TweenLite.to($('.appendIn'), .2, {className: "+=in"});
 
     });
@@ -1107,6 +1108,120 @@
 
 </script>
 
+
+<br><br>
+<p class="semi-title">Animazione rollover</p>
+
+<p>Sono molto importanti le animazioni roll'over, perche permettono effetti molto appariscenti. In questo caso è molto interessante come applicare la stessa funzione a tutti gli elementi, passando come argomento della funzione l'evento del mouse:</p>
+
+
+<br>
+
+
+<pre><code>
+    $('.arrayMouse').mouseenter(function(e) { // Questo al mouse enter
+
+        console.log(e); // Mostra tutte le informazioni relative all'evento
+        console.log(e.currentTarget); // Questo è l'elemento presente nell'attributo currentTarget
+
+
+        TweenLite.to($(e.currentTarget), 1, {scaleX:1.5, scaleY:1.5, rotation:25, ease: Elastic.easeOut.config(1, 0.3) }); // Applico l'aniamzione al target specifico
+
+
+    });
+
+    $('.arrayMouse').mouseleave(function(e) { // Questo al mouse leave
+
+        TweenLite.to($(e.currentTarget), 1, {scaleX:1, scaleY:1, rotation:0, ease: Elastic.easeOut.config(1, 0.3) }); // Applico l'aniamzione al target specifico
+
+
+    });
+
+</code></pre>
+
+<br><br>
+
+<div class="box-container rolloverContainer">
+    <div class="box arrayMouse"></div>
+    <div class="box arrayMouse"></div>
+    <div class="box arrayMouse"></div>
+    <div class="box arrayMouse"></div>
+    <div class="box arrayMouse"></div>
+    <div class="box arrayMouse"></div>
+    <div class="box arrayMouse"></div>
+</div>
+
+
+
+
+<script>
+    $('.arrayMouse').mouseenter(function(e) { // Questo al mouse enter
+
+        console.log(e); // Mostra tutte le informazioni relative all'evento
+        console.log(e.currentTarget); // Questo è l'elemento presente nell'attributo currentTarget
+
+
+        TweenLite.to($(e.currentTarget), 1, {scaleX:1.5, scaleY:1.5, rotation:25, ease: Elastic.easeOut.config(1, 0.3) }); // Applico l'aniamzione al target specifico
+
+
+    });
+
+    $('.arrayMouse').mouseleave(function(e) { // Questo al mouse leave
+
+        TweenLite.to($(e.currentTarget), 1, {scaleX:1, scaleY:1, rotation:0, ease: Elastic.easeOut.config(1, 0.3) }); // Applico l'aniamzione al target specifico
+
+
+    });
+
+</script>
+
+
+<br><br>
+<p class="semi-title">Disegnare con Javascript</p>
+
+<p>Tramite Javascript è possibile creare anche composiszioni. Nei casi più complessi si parla di vera e propria "grafica generativa", ovvero quasi "auto-generata". In questo caso abbiamo combinato la concatenazione di stringa, gli array (doppio) e l'append per creare una composizione interessante.</p>
+
+<br>
+
+
+<pre><code>
+    for (i=0; i < 10; i++){
+
+        for (z=0; z < 10; z++){
+
+            $(".generativeG").append("&lt;div class='box gen' style='top:" + i*50 + "px; left:" + z*50 + "px; transform: rotate(" + i*10 + "deg);'&gt;&lt;/div&gt;");
+
+        }
+
+
+    }
+
+</code></pre>
+
+<br><br>
+
+<div class="box-container generativeG">
+
+
+</div>
+
+
+
+
+<script>
+
+    for (i=0; i < 10; i++){
+
+        for (z=0; z < 10; z++){
+
+            $(".generativeG").append("<div class='box gen' style='top:"+ i*50 + "px; left:" + z*50 + "px; transform: rotate("+ i*10 +"deg);'></div>");
+
+        }
+
+
+    }
+
+</script>
 
 
 <!--Soluzioni-->
@@ -1177,7 +1292,14 @@
 </script>
 
 
+<div class="sitography">
+    <h4>Sitography</h4>
+    <ul class="list-unstyled">
+        <li><a href="https://highlightjs.org/" target="_blank">Highlight.js - usato per visualizzare il javascript di questa pagina</a></li>
+        <li><a href="http://dynamicguru.com/tools/html.php" target="_blank">WebTools - Convertitore html/asci usato per la visualizzazione del codice</a></li>
+    </ul>
 
+</div>
 
 
 </body>

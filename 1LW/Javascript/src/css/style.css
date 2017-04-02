@@ -27,6 +27,37 @@ code{
 	word-wrap: break-word;
 }
 
+.sitography {
+	position: relative;
+	margin-top: 100px;
+}
+
+
+.sitography:before{
+	content: '';
+	width: 100px;
+	height: 1px;
+	background-color: #333;
+	display: block;
+	position: absolute;
+	top:-20px;
+}
+
+.sitography a{
+	color: #444;
+}
+
+
+.sitography h4{
+	font-size: 14px;
+}
+
+.sitography ul{
+	font-size: 11px;
+}
+
+
+
 .btn:focus,.btn:active,.btn:active:focus {
 	outline: 0;
 }
@@ -103,4 +134,22 @@ code{
 #appendContainer{
 	display: flex;
 	overflow: hidden;
+}
+
+.rolloverContainer{
+	display: flex;
+}
+
+.generativeG{
+	overflow: hidden;
+	height: 600px;
+}
+
+.generativeG .box{
+	height: 50px;
+	width: 50px;
+}
+
+.gen{
+	position: absolute;
 }
