@@ -19,3 +19,36 @@ h4{
     box-shadow: 1px 1px 2px #888;
     padding: 8px;
 }
+
+.top-student{
+
+    background-color: #f5f5f5;
+    box-shadow: 0 6px 15px rgba(36,37,38,0.15);
+}
+
+.top-student td{
+    border: 0 !important;
+}
+
+.top-student td:first-child .stud-img{
+    border: 2px solid #e0e0e0;
+
+}
+
+
+.top-student td:nth-child(2) a{
+
+}
+
+
+.top-student td:nth-child(2) a:hover .top-l{
+    text-decoration: none;
+
+}
+
+.top-l{
+    margin-left: 4px;
+    display: inline-block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}

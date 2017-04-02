@@ -13,7 +13,8 @@ All the lessons are in the folder:
 
 ## Lessons
 
-* Animation
+* Animation [I'm an inline-style link](https://www.google.com)
+
 * Box-Model
 * Centering
 * Colors
@@ -21,6 +22,7 @@ All the lessons are in the folder:
 * Float
 * Images
 * Images - Background attachment
+* Javascript
 * Positioning
 * Transform
 

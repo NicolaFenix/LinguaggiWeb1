@@ -3,6 +3,25 @@ $(function () {
      * Create a constructor for sparklines that takes some sensible defaults and merges in the individual
      * chart options. This function is also available from the jQuery plugin as $(element).highcharts('SparkLine').
      */
+
+    function indexOfMax(arr) {
+        if (arr.length === 0) {
+            return -1;
+        }
+
+        var max = arr[0];
+        var maxIndex = 0;
+
+        for (var i = 1; i < arr.length; i++) {
+            if (arr[i] > max) {
+                maxIndex = i;
+                max = arr[i];
+            }
+        }
+
+        return maxIndex;
+    }
+
     Highcharts.SparkLine = function (a, b, c) {
         var hasRenderToArg = typeof a === 'string' || a.nodeName,
             options = arguments[hasRenderToArg ? 1 : 0],
@@ -103,6 +122,7 @@ $(function () {
         $tds = $('div[data-sparkline]'),
         $avgs = $('.average'),
         fullLen = $tds.length,
+        topArray = [],
         n = 0;
 
 
@@ -129,15 +149,23 @@ $(function () {
             data = $.map(arr[0].split(', '), parseFloat);
             chart = {};
 
-            console.log($avgs);
+
+
+
+
+
+            //console.log($avgs);
             var sum = data.reduce(add, 0);
 
             function add(a, b) {
                 return a + b;
             }
 
+            topArray.push(sum);
 
             var average = (sum / data.length);
+
+
 
 
 
@@ -198,6 +226,24 @@ $(function () {
                 $('#result').html('Generated ' + fullLen + ' sparklines in ' + (new Date() - start) + ' ms');
             }
         }
+        console.log(topArray);
+
+
+        topArray.max = function( array ){
+            return Math.max.apply( Math, array );
+        };
+
+
+
+
+        $('#studentiTable tr').eq(indexOfMax(topArray) + 1).addClass('top-student').find("td:nth-child(2) a").append("<span class='label label-default top-l'>TOP</span>");
+
+
+
+
+
+
+
     }
     doChunk();
 
