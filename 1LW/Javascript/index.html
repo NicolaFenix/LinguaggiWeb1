@@ -519,7 +519,7 @@
     togliendo elementi.</p>
 
 <p>Un method è una funzione degli array che si accede scrivendo il nome dell'array <code>.method</code> "punto e il nome
-    del method"</p>
+    del method".</p>
 
 <p>Gli array possono contenere diversi elementi, anche array stessi. Possono inoltre contenere variabili e combinazioni
     di elementi diversi (numeri, variabili, stringhe)</p>
@@ -598,10 +598,20 @@
 <p>Più nello specifico, selezionandolo dall'elemento document, che rappresenta la pagina web <code>var x =
     document.getElementById("mySelect");</code></p>
 
-<p>////////////////////// Code</p>
+<pre><code>
+    var btn = document.getElementById("myBtn");
+
+    btn.onclick = function () {
+        alert("ok");
+
+    };
+
+</code></pre>
 
 <button class="btn btn-default" id="myBtn">Test me</button>
-<br>
+<br><br>
+
+
 
 <script>
 
@@ -616,7 +626,8 @@
 
 <p class="semi-title">Cambiare classe ad un oggetto</p>
 <p>Selezionando on oggetto, è possibile accedere a tutta una serie di proprietà, tra cui quelle css e di cambio
-    classe</p>
+    classe. Grazie a queste modifiche, è possibile con poche righe di codice, e applicando animazioni CSS, ottenere diversi effetti interessanti e coinvolgenti. Esistono almeno 3 modi per effettuare tali modifiche, dal più classico al più moderno:</p>
+<br>
 
 <p>Javascript Puro</p>
 
@@ -633,8 +644,22 @@
 <code>document.getElementById("MyElement").className = document.getElementById("MyElement").className.replace(
     /(?:^|\s)MyClass(?!\S)/g , '' ); </code>
 
-
 <br><br>
+<pre><code>
+    var rosso = document.getElementById("rosso");
+    var blu = document.getElementById("blu");
+
+    rosso.onclick = function () {
+        document.getElementById("box").className += " rosso"; // Ho dovuto anche mettere lo spazio!!!
+    };
+
+    blu.onclick = function () {
+        document.getElementById("box").className += " blu"; // Ho dovuto anche mettere lo spazio!!!
+    };
+
+</code></pre>
+
+<br>
 <button class="btn btn-default" id="rosso">Rosso</button>
 <button class="btn btn-default" id="blu">Blu</button>
 <br>
@@ -643,6 +668,9 @@
     <div class="box" id="box"></div>
 
 </div>
+
+
+
 
 <script>
 
@@ -658,7 +686,7 @@
     };
 
 </script>
-<br><br><br>
+<br><br>
 
 <p>Jquery</p>
 
@@ -675,6 +703,26 @@
 <code>$('#MyElement').toggleClass('MyClass');</code>
 
 <br><br>
+<pre><code>
+    // Non c'è bisogno di selezionare, si può concatenare direttamente (anche se si può fare anche negli altri modi) in effetti
+
+    $('#rossojq').click(function () {
+        $('#boxjq').removeClass('blu');
+        $('#boxjq').addClass('rosso');
+    });
+
+    $('#blujq').click(function () {
+        $('#boxjq').removeClass('rosso');
+        $('#boxjq').addClass('blu');
+    });
+
+    $('#togglejq').click(function () {
+        $('#boxjq').toggleClass('gold');
+    });
+
+</code></pre>
+
+<br>
 <button class="btn btn-default" id="rossojq">Rosso</button>
 <button class="btn btn-default" id="blujq">Blu</button>
 <button class="btn btn-default" id="togglejq">Toggle</button>
@@ -703,7 +751,7 @@
 </script>
 
 
-<br><br><br>
+<br><br>
 
 <p>HTML5</p>
 
@@ -721,6 +769,30 @@
 
 
 <br><br>
+<pre><code>
+    var rosso = document.getElementById("rossoh5");
+    var blu = document.getElementById("bluh5");
+    var toggle = document.getElementById("toggleh5");
+
+
+    rosso.onclick = function () {
+        document.getElementById("boxh5").classList.remove('blu');
+        document.getElementById("boxh5").classList.add('rosso');
+    };
+
+    blu.onclick = function () {
+        document.getElementById("boxh5").classList.remove('rosso');
+        document.getElementById("boxh5").classList.add('blu');
+    };
+
+    toggle.onclick = function () {
+        document.getElementById("boxh5").classList.toggle('gold');
+        ;
+    };
+
+</code></pre>
+
+<br>
 <button class="btn btn-default" id="rossoh5">Rosso</button>
 <button class="btn btn-default" id="bluh5">Blu</button>
 <button class="btn btn-default" id="toggleh5">Toggle</button>
@@ -760,14 +832,27 @@
 
 <p>Si possono facilmente realizzare animazioni come questa:</p>
 
-<br><br>
+<br>
+
+<pre><code>
+    var transition = document.getElementById("transition");
+
+    transition.onclick = function () {
+        document.getElementById("boxt").classList.toggle('in');
+        ;
+    };
+
+</code></pre>
+
+<br>
 <button class="btn btn-default" id="transition">Anima</button>
 
 <div class="box-container">
     <div class="box transition" id="boxt"></div>
 
 </div>
-
+<br>
+<p>La cosa incredibile è il ritorno, ovvero il fatto che venga fatta un'aniamzione opposta quando viene rimossa la classe. Su questo, html, css e javascript sorpassano pesantemente flash (anche se ormai non ce ne è più bisogno).</p>
 
 <script>
 
@@ -779,16 +864,37 @@
     };
 
 </script>
-
+<br><br>
 <p class="semi-title">Animazione array</p>
 
-<p>Posso animare una serie di oggetti con in un array? </p>
+<p>Posso animare una serie di oggetti presenti in un array? </p>
 
-<a href="https://greensock.com/gsap" target="_blank">GSAP</a>
-<a href="https://greensock.com/get-started-js" target="_blank">GSAP - Getting started</a>
+
+<br><br>
+
+
+
+
+<pre><code>
+
+    $('#transitionArray').click(function () {
+
+        var scatole = $('.array'); // Jquery prende gia gli oggetti come un array
+        var delayAsc = 0;
+
+        for (i = 0; i < scatole.length; i++) {
+
+            TweenLite.to(scatole[i], .2, {className: "+=in", delay: delayAsc});
+            delayAsc += 0.1;
+
+        }
+
+    });
+
+</code></pre>
+
 <br><br>
 <button class="btn btn-default" id="transitionArray">Anima array</button>
-
 <div class="box-container arrayT">
     <div class="box transition array"></div>
     <div class="box transition array"></div>
@@ -798,6 +904,8 @@
     <div class="box transition array"></div>
     <div class="box transition array"></div>
 </div>
+
+
 
 
 <script>
@@ -816,6 +924,189 @@
     });
 
 </script>
+
+
+<br><br>
+<p class="semi-title">Animazione TweenMax</p>
+
+<p>Nella precedente sezione abbiamo visto un animazione realizzata tramite TweenMax. </p>
+
+<a href="https://greensock.com/gsap" target="_blank">GSAP</a> |
+<a href="https://greensock.com/get-started-js" target="_blank">GSAP - Getting started + Ease Visualizer</a>
+
+<p>Questa potente libreria offre fantastiche soluzioni come:</p>
+<br><br>
+
+
+<p>Eventi</p>
+
+<p>Si può associare una funzione alla fine di una transizione:</p>
+
+
+<pre><code>
+     $('#tweenMaxBtn1').click(function () {
+
+
+        TweenLite.to($('.tweenmax1'), 2, {width:200, height:200, ease: Elastic.easeOut.config(1, 0.3) , onComplete:function(){
+
+            // Funzione al complete della funzione precedente: può essere anche una tween!
+
+            TweenMax.to($('.tweenmax1'), 2.5, { x:200, ease: SlowMo.ease.config(0.7, 0.7, false)});
+
+        }});
+
+    });
+
+</code></pre>
+
+<br><br>
+
+
+<p>Animazione Repeat</p>
+
+<p>Si può associare un'animazione che procede all'infinito:</p>
+
+
+<pre><code>
+    $('#tweenMaxBtn2').click(function () {
+
+        TweenMax.to($('.tweenmax2'), 2, {rotation:360, repeat:-1, ease:Linear.easeNone}); // Notare come è stato messo l'ease linear sennò il loop non risultava fluido
+
+    });
+
+</code></pre>
+
+<br><br>
+
+<p>Animazione Yo-Yo</p>
+
+<p>Si può anche settare l'animazione in modo che proceda al contrario, con <code>yoyo:true</code>:</p>
+
+
+<pre><code>
+    $('#tweenMaxBtn3').click(function () {
+
+        TweenMax.to($('.tweenmax3'), 2, {rotation:45, repeat:3, yoyo:true}); // Le ripetizioni ora sono solo 2 (Anche se abbiamo messo 3. E' possibile che parta da 0)
+
+    });
+
+</code></pre>
+
+<br><br>
+
+<button class="btn btn-default" id="tweenMaxBtn1">Animazione on complete</button> <button class="btn btn-default" id="tweenMaxBtn2">Animazione Continua</button> <button class="btn btn-default" id="tweenMaxBtn3">Animazione Yo-Yo</button>
+<div class="box-container">
+    <div class="box tweenmax1"></div>
+    <div class="box tweenmax2"></div>
+    <div class="box tweenmax3"></div>
+</div>
+
+
+
+<script>
+    $('#tweenMaxBtn1').click(function () {
+
+
+        TweenLite.to($('.tweenmax1'), 2, {width:200, height:200, ease: Elastic.easeOut.config(1, 0.3) , onComplete:function(){
+
+            // Funzione al complete della funzione precedente: può essere anche una tween!
+
+            TweenMax.to($('.tweenmax1'), 2.5, { x:200, ease: SlowMo.ease.config(0.7, 0.7, false)});
+
+        }});
+
+    });
+
+    $('#tweenMaxBtn2').click(function () {
+
+
+        TweenMax.to($('.tweenmax2'), 2, {rotation:360, repeat:-1, ease:Linear.easeNone}); // Notare come è stato messo l'ease linear sennò il loop non risultava fluido
+
+    });
+
+    $('#tweenMaxBtn3').click(function () {
+
+
+        TweenMax.to($('.tweenmax3'), 2, {rotation:45, repeat:3, yoyo:true}); // Le ripetizioni ora sono solo 2 (Anche se abbiamo messo 3. E' possibile che parta da 0)
+
+    });
+
+</script>
+
+
+<br><br>
+<p class="semi-title">Aggiungere elemento al DOM</p>
+
+<p>E' possibile aggiungere elementi al DOM, in diversi modi, come al solito. Ne vediamo 2:</p>
+
+<br>
+<p>Javascript</p>
+
+<br>
+
+<pre><code>
+    $('#appendDOM').click(function () {
+
+        var div = document.getElementById('appendContainer');
+
+        div.innerHTML = div.innerHTML + '&lt;div class='box transition array appendIn'&gt;&lt;/div&gt;';
+
+        TweenLite.to($('.appendIn'), .2, {className: "+=in"}); // Devo aggiungere la classe con TweenMax perchè facendolo in classico javascript non viene lanciata l'animazione per problemi di DOM reflow (http://stackoverflow.com/questions/24148403/trigger-css-transition-on-appended-element)
+
+    });
+
+
+</code></pre>
+
+<br><br>
+<p>Jquery</p>
+
+<br>
+
+<pre><code>
+    $('#appendDOMjq').click(function () {
+
+        $("#appendContainer").append("&lt;div class='box transition array appendIn'&gt;&lt;/div&gt;");
+
+        TweenLite.to($('.appendIn'), .2, {className: "+=in"}); // Idem come sopra
+
+    });
+
+</code></pre>
+
+<br><br>
+<button class="btn btn-default" id="appendDOM">HTML5</button> <button class="btn btn-default" id="appendDOMjq">Jquery</button>
+<div class="box-container" id="appendContainer">
+
+</div>
+
+
+
+
+
+<script>
+    $('#appendDOM').click(function () {
+
+        var div = document.getElementById('appendContainer');
+
+        div.innerHTML = div.innerHTML + '<div class="box transition array appendIn"></div>';
+
+        TweenLite.to($('.appendIn'), .2, {className: "+=in"}); // Devo aggiungere la classe con TweenMax perchè facendolo in classico javascript non viene lanciata l'animazione per problemi di DOM reflow (http://stackoverflow.com/questions/24148403/trigger-css-transition-on-appended-element)
+
+    });
+
+
+    $('#appendDOMjq').click(function () {
+
+        $("#appendContainer").append("<div class='box transition array appendIn'></div>");
+
+        TweenLite.to($('.appendIn'), .2, {className: "+=in"});
+
+    });
+
+
+</script>
+
 
 
 <!--Soluzioni-->

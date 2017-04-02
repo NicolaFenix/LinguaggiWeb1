@@ -22,6 +22,11 @@ pre{
 	border: 0 !important;
 }
 
+code{
+	word-break: break-all;
+	word-wrap: break-word;
+}
+
 .btn:focus,.btn:active,.btn:active:focus {
 	outline: 0;
 }
@@ -40,6 +45,7 @@ pre{
 	border: 1px dashed #666;
 	margin: 3px;
 	position: relative;
+	min-height: 162px;
 }
 
 
@@ -94,3 +100,7 @@ pre{
 	display: flex;
 }
 
+#appendContainer{
+	display: flex;
+	overflow: hidden;
+}
