@@ -175,7 +175,7 @@ $(function () {
                  $avg.addClass("label-danger");
              }
 
-            if (average > 18 && average < 24) {
+            if (average > 18 && average <= 24) {
                 $avg.addClass("label-warning");
             }
 
@@ -203,7 +203,7 @@ $(function () {
 
                 }],
                 yAxis: {
-                    max: 31
+                    max: 32
                 },
                 tooltip: {
                     headerFormat: '<span style="font-size: 10px"> Esercitazione {point.x}:</span><br/>',
