@@ -13,16 +13,16 @@ All the lessons are in the folder:
 
 ## Lessons
 
-* [Animation](http://www.quasar-1617.com/1LW/Animations/index.html)
-* [Box-Model](http://www.quasar-1617.com/1LW/Box-model/index.html)
-* [Centering](http://www.quasar-1617.com/1LW/Centering/index.html)
-* [Colors](http://www.quasar-1617.com/1LW/Colors/index.html)
-* [Display](http://www.quasar-1617.com/1LW/Display/index.html)
-* [Float](http://www.quasar-1617.com/1LW/Float/index.html)
-* [Images](http://www.quasar-1617.com/1LW/Images/index.html)
-* [Images - Background attachment](http://www.quasar-1617.com/1LW/Images-background-attachment/index.html)
-* [Javascript](http://www.quasar-1617.com/1LW/Javascript/index.html)
-* [Positioning](http://www.quasar-1617.com/1LW/Positioning/index.html)
-* [Transform](http://www.quasar-1617.com/1LW/Transform/index.html)
+* [Animation](http://www.mentaltoy.com/resources/quasar-1617/1LW/Animations/index.html)
+* [Box-Model](http://www.mentaltoy.com/resources/quasar-1617/1LW/Box-model/index.html)
+* [Centering](http://www.mentaltoy.com/resources/quasar-1617/1LW/Centering/index.html)
+* [Colors](http://www.mentaltoy.com/resources/quasar-1617/1LW/Colors/index.html)
+* [Display](http://www.mentaltoy.com/resources/quasar-1617/1LW/Display/index.html)
+* [Float](http://www.mentaltoy.com/resources/quasar-1617/1LW/Float/index.html)
+* [Images](http://www.mentaltoy.com/resources/quasar-1617/1LW/Images/index.html)
+* [Images - Background attachment](http://www.mentaltoy.com/resources/quasar-1617/1LW/Images-background-attachment/index.html)
+* [Javascript](http://www.mentaltoy.com/resources/quasar-1617/1LW/Javascript/index.html)
+* [Positioning](http://www.mentaltoy.com/resources/quasar-1617/1LW/Positioning/index.html)
+* [Transform](http://www.mentaltoy.com/resources/quasar-1617/1LW/Transform/index.html)
 
 
